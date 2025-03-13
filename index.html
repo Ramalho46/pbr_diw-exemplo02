@@ -4,20 +4,83 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Testes Flexbox</title>
+    <style>
+        * {
+            font-size: 16px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .cabeçalho {
+            display: flex;
+            flex-wrap: wrap;
+            align-content: start;
+        }
+
+        .item {
+            background-color: red;
+            color: white;
+            font-weight: bold;
+            padding: 1rem;
+            margin: .1rem;
+            width: 5em;
+            height: 3rem;
+        }
+
+        .logo{
+            flex-grow: 1;
+        }
+
+        .titulo-do-site{
+            flex-grow: 12;
+        }
+
+        .sandwich-menu{
+            flex-grow: 1;
+        }
+
+        .painel{
+            height: 30rem;
+            display: flex;
+        }
+
+        .menu-lateral{
+           
+            flex-grow: 3;
+        }
+
+        .parte-principal{
+            border: 3px solid blue;
+            padding: 1rem;
+            margin: .1rem;
+            flex-grow: 11;
+        }
+
+        .tile{
+            background-color: blueviolet;
+            height: 3rem;
+            margin: .5rem;
+        }
+
+        .tile:hover{
+            background-color: blue;
+            color: white;
+        }
+    </style>
 </head>
 <body>
-    <div class="container"></div>
-    <div class="item">Item 01</div>
-    <div class="item">Item 02</div>
-    <div class="item">Item 03</div>
-    <div class="item">Item 04</div>
-    <div class="item">Item 05</div>
-    <div class="item">Item 06</div>
-    <div class="item">Item 07</div>
-    <div class="item">Item 08</div>
-    <div class="item">Item 09</div>
-    <div class="item">Item 10</div>
-    <div class="item">Item 11</div>
-    <div class="item">Item 12</div>
+    <header class="cabeçalho">
+        <div class="item logo">Logo</div>
+        <div class="item titulo-do-site">Titulo do site</div>
+        <div class="item sandwich-menu">Menu</div>
+    </header>
+    <section class="painel">
+        <nav class="menu-lateral">navegação
+            <div class="title">item 01</div>
+            <div class="title">item 02</div>
+            <div class="title">item 03</div>
+            <div class="title">item 04</div>
+        </nav>
+        <main main="parte-principal">parte principal</main>
+    </section>
 </body>
 </html>
